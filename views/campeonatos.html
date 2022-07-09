@@ -1,0 +1,143 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Valorant Win Campeonatos</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+            <link rel="stylesheet" href="/public/css/style.css">
+            <link rel="stylesheet" href="/public/css/styleCampeonato.css">
+            <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <section class="contatos">
+                <span>Valorant Win</span>
+                <a href=""><img src="public/imagens/instagram.png" alt="instagram">
+                </a>
+        
+                <a href=""><img src="public/imagens/facebook.png" alt="instagram">
+                </a>
+        
+                <div class="img-logo"><img style="border: 0;" src="public/imagens/valorant-logo3.png" alt="vava"></div>
+                <div class="img-menu"><img style="border: 0;" src="public/imagens/menu-aberto.png" alt="vava"></div>
+            </section>
+
+            <section class="menu">
+                <ul>
+                    <a href="/home"><li>Home</li></a>
+                    <a href="/campeonatos"><li style="background-color: #ccc;">Campeonatos</li></a>
+                    <a href="recrutamento.html"><li>Recrutamento</li></a>
+                </ul>
+            </section>
+
+            <main id="mainCampeonatos">
+                <section class="container">
+                    <h2>Campeonatos Rolando</h2>
+
+                    <label for="filtrarTabela">Filtre:</label>
+                    <input type="text" name="filtro" id="filtrarTabela" placeholder="Digite o nome da organização"></input>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="tituloTbl">Organização</td>
+                                <td class="tituloTbl">Valor</td>
+                                <td class="tituloTbl">Quantidades de Equipes</td>
+                                <td class="tituloTbl">Requisitos</td>
+                                <td class="tituloTbl">Premiações</td>
+                                <td class="tituloTbl">Site para inscrição</td>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabelaOrganizacoes"></tbody>
+
+                    </table>
+
+                </section>
+            </main>
+
+
+            <section class="container">
+                <h2 id="titulo-form">Adicionar novo campeonato</h2>
+                <ul id="mensagensErro">
+                    
+                </ul>
+                <form class="form1" >
+                    <div class="grupo">
+                        <label for="nome">Organização:</label>
+                        <input required id="nome" name="nome" type="text" placeholder="Digite o nome da sua organização" class="campo">
+                    </div>
+
+                    <div class="grupo">
+                        <input type="radio"  name="radioValor" class="radio" id="radioValor" value="valor" checked>
+                        <label id="radioValor" class="radio" for="radioValor">Valor</label>
+                        
+                        <input type="radio" id="radioGratis" class="radio" name="radioValor" value="gratis">
+                        <label id="radioGratis" class="radio" for="radioGratis">Grátis</label>
+                        
+                        <input required id="valor" name="valor" type="number" min="1" placeholder="Digite o valor para inscrição" class="campo campo-medio" step="0.01">
+                    </div>
+
+                    <div class="grupo">
+                        <label for="qtdeEquipes">Quantidades de Equipes:</label>
+                        <input required id="qtdeEquipes" name="qtdeEquipes" type="number" min="4" placeholder="Digite a quantidades de Equipes" class="campo campo-medio">
+                    </div>
+
+                    <div class="grupo">
+                        <input type="radio"  name="radioRequisitos" class="radio" id="radioRequisitos" value="radioRequisitos" checked>
+                        <label for="radioRequisitos" class="radio">Requisitos:</label>
+
+                        <input type="radio"  name="radioRequisitos" class="radio" id="radioSemRequisitos" value="radioSemRequisitos">
+                        <label for="radioSemRequisitos" class="radio" id="radioSemRequisitos">Sem requisitos:</label>
+
+                        
+                        <input required id="requisitos" name="requisitos" type="text" placeholder="Digite os requisitos" class="campo campo-medio">
+                    </div>
+
+                    
+                    <div class="grupo">
+                        <label for="siteInscricao">Site para inscrição:</label>
+                        <input required id="siteInscricao" name="siteInscricao" type="text" placeholder="Digite o site para inscrição" class="campo campo-medio">
+                    </div>
+
+                    <div class="grupo">
+                        <label for="dataFimInscricao">Data fim inscrição:</label>
+                        <input required id="dataFimInscricao" name="dataFimInscricao" type="date" placeholder="Digite a data do fim da inscrição" class="campo campo-medio">
+                    </div>
+
+                    <div class="grupo">
+                        <label for="dataCampeonato">Data campeonato:</label>
+                        <input required id="dataCampeonato" name="dataCampeonato" type="date" placeholder="Digite a data do campeonato" class="campo campo-medio">
+                    </div>
+                    <br>
+                    <div class="grupo">
+                        <label for="premiacao">Premiações:</label>
+                        <textarea required name="premiacao" id="premiacao" cols="30" rows="10" class="campo campo-medio"></textarea>
+                    </div>
+
+    
+                    <button id="adicionarEvento" type="submit" class="botao bto-principal">Adicionar</button>
+                </form>
+            </section>
+
+
+            <footer>
+                <h1>Valorant Win</h1>
+        
+                <ul>
+                    <a href=""><img src="public/imagens/instagram.png" alt="instagram"></a>
+                    <a href=""><img src="public/imagens/facebook.png" alt="instagram"></a>
+                </ul>
+                <span>(c) 2020 Valorant Win</span>
+            </footer>
+
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script src="/public/js/filtro.js"></script>
+            <script src="/public/js/manipulacaoRadioHtml.js"></script>
+            <script src="/public/js/menuNavegacao.js"></script>
+            <script type="module" src="/public/js/incluirEventoTabela.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Valorant Win</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/public/css/tela_login.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<form>
+		<fieldset>
+			<!-- aqui é um logo da tela de login-->
+			<span class="login_top">Login</span>
+
+			<ul id="mensagensErro"></ul>
+
+			<!-- aqui é a criação do usuario e login-->
+			<div class="nome_usuario">
+				<h2 class="Usuario">Usuário</h2>
+				<input type="text" name="usuario" id="usuario" required="">
+				<h2 class="Senha">Senha</h2>
+				<input type="password" name="senha" id="senha"	required="" >
+			</div>
+
+			<!-- aqui é a opção para manter conectado ao login-->
+			<div class="connect">
+				<div class="con">
+					<input type="checkbox" name="conectado" value="conectado"><span>Manter conectado</span>
+				</div>
+			</div>
+
+			<!-- aqui é onde clica para entrar em sua conta já com o value-->
+			<div>
+				<input type="button" name="acao" id="loginEntrar" value="Entrar">
+			</div>
+
+			<!-- aqui é a opção quando esqueceu a senha ou quer criar um cadastro-->
+			<div class="conta">
+				<div class="inscreva">
+					<span>Não tem uma conta? <a id="cadastro" href="/cadastro">Crie uma!</a></span>
+				</di>
+				<div>
+					<a href=""><span>Esqueci minha senha</span></a>
+				</div>	
+			</div>
+
+			<div id="alertaErroValidForm" class="alert alert-danger d-none">
+				<span id="mostraErro"></span>
+			</div>
+		</fieldset>
+	</form>
+
+	<script type="module" src="/public/js/validaLogin.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>
